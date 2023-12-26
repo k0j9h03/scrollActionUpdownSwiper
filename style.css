@@ -1,0 +1,44 @@
+.scrollDummy{
+    color: white;
+    font-size: 200px;
+}
+
+.world{
+    position: relative;
+}
+
+.photocontainer {
+    position: absolute; /* 요소들을 겹치게 함 */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    box-sizing: border-box;
+    background-size: cover;
+}
+
+#photocontainer1 {
+    background-image: url('img/image1.jpg'); /* 첫 번째 이미지 */
+    z-index: 1; /* z-index를 사용하여 겹침 순서 조정 */
+}
+  
+#photocontainer2 {
+    background-image: url('img/image2.jpg'); /* 두 번째 이미지 */
+    z-index: 2; /* 더 높은 z-index로 이 요소가 위에 오도록 함 */
+}
+  
+.blackback, .whiteback {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+}
+  
+.blackback {
+    z-index: 2;
+}
+  
+.whiteback {
+    z-index: 3;
+}
+  
