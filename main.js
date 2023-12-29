@@ -41,7 +41,7 @@ let callback = (event, observer) => {
     let container2 = document.querySelector('#photocontainer2');
     let 스크롤가능높이 = 5000 - window.innerHeight;
     let insetTopReverse = ( firstScrollTop / (스크롤가능높이 + firstScrollTop) ) * 100
-    let percentage = 100-( (5.88 *insetTopReverse) - 288.24);
+    let percentage = 100-( (5.88 *insetTopReverse) - 280.24);
     container2.style.clipPath = `inset( ${percentage}% 0 0 0)`;
     console.log(percentage);
   }
