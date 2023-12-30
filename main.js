@@ -7,7 +7,7 @@ const worldcontainer = document.querySelector('.innerworld');
 const photocontainer = document.querySelector('.photocontainer');
 const photocontainer2 = document.querySelector('#photocontainer2');
 
-const callback = (event, observer) => {
+const handleIntersection = (event, observer) => {
     event.forEach(entry => {
         entry.isIntersecting ? handlePhotoContainerVisible() : handlePhotoContainerNotVisible();
     });
@@ -53,5 +53,5 @@ const options = {
     rootMargin: '0px', // root의 마진
     threshold: 0.6 // 요소의 50%가 보여질 때 감지
 };
-const observer = new IntersectionObserver(callback, options);
+const observer = new IntersectionObserver(handleIntersection, options);
 observer.observe(photocontainer);
